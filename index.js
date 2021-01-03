@@ -13,6 +13,10 @@ const PORT = process.env.PORT || 5000
 
 app.listen(PORT, () =>console.log(`Server has started on ${PORT}`))
 
+app.get('/',(req,res)=>{
+  res.send("hello! Welcome to backend api")
+})
+
 mongoose.connect(process.env.MONGODB_CONNECTION_STRING,{
   useNewUrlParser:true,
   useUnifiedTopology:true,
